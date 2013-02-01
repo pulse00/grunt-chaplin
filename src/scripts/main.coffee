@@ -30,7 +30,7 @@ require.config
     handlebars: '../components/scripts/handlebars/handlebars'
 
     # Micro-template directory.
-    templates: '../templates'
+    templates: 'templates'
 
     # Core framework powering the single-page application
     chaplin: 'vendor/chaplin'

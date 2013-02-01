@@ -17,7 +17,9 @@ module.exports = class View extends Chaplin.View
 
   #! Just forwards `@template` through `@getTemplateFunction` as
   #! the template has been precompiled by HAML.
-  getTemplateFunction: -> @template
+  getTemplateFunction: ->
+    keys = Object.keys @template
+    return @template[keys[0]]
 
   stickit: ->
     super

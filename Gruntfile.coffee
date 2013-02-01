@@ -117,8 +117,10 @@ module.exports = (grunt) ->
       compile:
         options:
           amd: true
+          processName: (filename) ->
+            return filename.replace('src/templates/', '').replace('.hbs', '')
         files: [
-          dest: 'temp/templates/'
+          dest: 'temp/scripts/templates/'
           cwd: 'src/templates'
           ext: '.js'
           expand: true
