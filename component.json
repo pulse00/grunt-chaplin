@@ -1,0 +1,53 @@
+{
+  "name": "composition",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "1.8.x",
+    "lodash": "0.10.x",
+    "backbone": "0.9.x",
+    "json3": "3.2.x",
+    "moment": "1.7.x",
+    "underscore.string": "2.3.x",
+    "requirejs": "2.1.x",
+    "almond": "0.2.x",
+    "bootstrap-sass": "2.2.x",
+    "backbone.stickit": "0.6.x",
+    "handlebars": "1.0.x"
+  },
+  "exportsOverride": {
+    "jquery": {
+      "scripts": "jquery.js"
+    },
+    "almond": {
+      "scripts": "almond.js"
+    },
+    "lodash": {
+      "scripts": "lodash.js"
+    },
+    "backbone": {
+      "scripts": "backbone.js"
+    },
+    "json3": {
+      "scripts": "lib/json3.js"
+    },
+    "moment": {
+      "scripts": "moment.js"
+    },
+    "underscore.string": {
+      "scripts": "lib/underscore.string.js"
+    },
+    "requirejs": {
+      "scripts": "require.js"
+    },
+    "bootstrap-sass": {
+      "scripts": "docs/assets/js/bootstrap.js",
+      "styles": "lib/**/*.scss"
+    },
+    "backbone.stickit": {
+      "scripts": "backbone.stickit.js"
+    },
+    "handlebars" : {
+      "scripts" : "handlebars.js"
+    }
+  }
+}

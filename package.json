@@ -1,0 +1,21 @@
+{
+  "author": "Robert Gruendler",
+  "name": "chaplin-grunt",
+  "version": "0.3.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-coffee": "0.4.x",
+    "grunt-contrib-clean": "0.4.x",
+    "grunt-contrib-copy": "0.4.x",
+    "grunt-contrib-stylus": "0.4.x",
+    "grunt-contrib-connect": "0.1.x",
+    "grunt-contrib-watch": "0.2.x",
+    "grunt-contrib-requirejs": "0.4.x",
+    "grunt-contrib-handlebars": "0.5.x",
+    "grunt-coffeelint": "0.0.x",
+    "grunt-urequire": "0.1.x",
+    "grunt-bower-task": "0.1.x"
+  }
+}
