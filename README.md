@@ -15,6 +15,12 @@ Based on https://github.com/mehcode/composition.
 
 This is not production ready, just a playground to build chaplin apps with grunt.
 
+
+## Requirements
+
+- [npm](https://npmjs.org/)
+- [grunt 4.x](https://github.com/gruntjs/grunt/wiki/Getting-started)
+
 ### Installing
 
 Run 'npm install' to install the node dependencies.
@@ -33,6 +39,16 @@ grunt build
 ```
 
 The development task will compile and optimize the app into single files, inside the `build` directory.
+
+
+
+### Troubleshooting
+
+### npm
+
+If you get any node errors while running `grunt` tasks, try to remove the `node_modules` directory, run `npm cache clean`
+and then `npm install` again to ensure you have the right versions of the modules.
+
 
 ## License
 Unless otherwise noted, all files contained within this project are liensed

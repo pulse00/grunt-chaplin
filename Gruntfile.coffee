@@ -48,6 +48,9 @@ module.exports = (grunt) ->
             '!*.{coffee,scss,hbs}'
           ]
         ]
+      index:
+        files:
+          'temp/index.html': 'src/index.html'
 
       build:
         files: [
@@ -181,7 +184,9 @@ module.exports = (grunt) ->
   # Prepare
   # -------
   grunt.registerTask 'prepare', [
+    'clean'
     'bower:install'
+    'clean:bower'
   ]
 
   # Script
@@ -202,6 +207,8 @@ module.exports = (grunt) ->
   # -------
   grunt.registerTask 'default', [
     'prepare'
+    'copy:static'
+    'copy:index'
     'script'
     'handlebars:compile'
     'stylus:compile'
