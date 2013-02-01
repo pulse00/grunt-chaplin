@@ -45,12 +45,18 @@ module.exports = (grunt) ->
           expand: true
           src: [
             '**/*'
-            '!*.{coffee,scss,hbs}'
+            '!*.{coffee,styl,hbs,html}'
           ]
         ]
       index:
         files:
           'temp/index.html': 'src/index.html'
+
+      buildIndex:
+        files:
+          'build/index.html' : 'src/index.prod.html'
+          'build/scripts/almond.js' : 'src/components/scripts/almond/almond.js'
+
 
       build:
         files: [
@@ -123,7 +129,8 @@ module.exports = (grunt) ->
     # -------
     stylus:
       compile:
-        files: 'temp/styles/main.css': ['src/styles/**/*.styl']
+        files:
+          'temp/styles/main.css': ['src/styles/**/*.styl']
 
     # Watch
     # -----
@@ -223,7 +230,8 @@ module.exports = (grunt) ->
     'copy:static'
     'script'
     'handlebars:compile'
-    'stylus:build'
+    'stylus:compile'
     'requirejs:compile'
     'copy:build'
+    'copy:buildIndex'
   ]
