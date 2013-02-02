@@ -5,6 +5,7 @@
 
 _       = require 'underscore'
 Chaplin = require 'chaplin'
+templates = require 'templates'
 
 #! Extends the chaplin view, well; we'll leave it a that.
 module.exports = class View extends Chaplin.View
@@ -15,11 +16,9 @@ module.exports = class View extends Chaplin.View
   #! Boolean indicating if we are `stuck` through stickit
   _stuck: false
 
-  #! Just forwards `@template` through `@getTemplateFunction` as
-  #! the template has been precompiled by HAML.
+  #! Get the precompiled handlebars template by template name
   getTemplateFunction: ->
-    keys = Object.keys @template
-    return @template[keys[0]]
+    return templates[@template]
 
   stickit: ->
     super
